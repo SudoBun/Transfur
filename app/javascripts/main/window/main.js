@@ -4,7 +4,7 @@ import { BrowserWindow } from 'electron'
 import json from '../../package.json'
 
 function init () {
-	var mainWindow = new BrowserWindow({
+	let mainWindow = new BrowserWindow({
 		title: json.name,
 		width: json.settings.width,
 		height: json.settings.height,
@@ -13,8 +13,8 @@ function init () {
 		transparent: true,
 		frame: false
 	})
-	
-	mainWindow.on('closed', function () {
+
+	mainWindow.on('closed', () => {
 		mainWindow = null
 	})
 
@@ -24,7 +24,7 @@ function init () {
 		slashes: true
 	}))
 
-	mainWindow.webContents.on('did-finish-load', function() {
+	mainWindow.webContents.on('did-finish-load', () => {
 		mainWindow.webContents.send('loaded', {
 			appName: json.name,
 			electronVersion: process.versions.electron,
@@ -33,10 +33,10 @@ function init () {
 		})
 	})
 
-	mainWindow.on('closed', function() {
+	mainWindow.on('closed', () => {
 		mainWindow = null
 	})
-	
+
 	return mainWindow
 }
 

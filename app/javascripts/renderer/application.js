@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	webFrame.setVisualZoomLevelLimits(1, 1)
 	webFrame.setLayoutZoomLevelLimits(0, 0)
 
-	var closeEl = document.querySelector('.close')
-	closeEl.addEventListener('click', function () {
+	let closeEl = document.querySelector('.close')
+	closeEl.addEventListener('click', () => {
 		remote.getCurrentWindow().close()
 	})
 
-	var minimizeEl = document.querySelector('.minimize')
-	minimizeEl.addEventListener('click', function () {
+	let minimizeEl = document.querySelector('.minimize')
+	minimizeEl.addEventListener('click', () => {
 		remote.getCurrentWindow().minimize()
 	})
 })

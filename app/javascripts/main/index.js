@@ -4,8 +4,8 @@ import { app, BrowserWindow, session } from 'electron'
 import main from './main'
 import alert from './alert'
 
-app.on('ready', function() {
-	var mainWindow = main()
+app.on('ready', () => {
+	let mainWindow = main()
 
 	alert(mainWindow, "This is a test!")
 
