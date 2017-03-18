@@ -1,0 +1,14 @@
+{
+  "name": "Transfur",
+  "version": "0.1.0",
+  "description": "Transfur application built with Electron",
+  "author": {
+    "name": "SudoBun",
+    "email": ""
+  },
+  "license": "MIT",
+  "main": "javascripts/main/index.js",
+  "dependencies": {
+
+  }
+}

@@ -1,0 +1,155 @@
+// Includes
+@import "shared";
+
+// Vars
+$optionPaneWidth: 120px;
+
+// Styles
+header {}
+
+main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .option-section {
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+    }
+    
+    .option-pane {
+        padding: 20px;
+        padding-top: 0;
+        width: $optionPaneWidth;
+        
+        .option-title {
+            margin: 0;
+            font-size: 12pt;
+            margin-bottom: 4px;
+        }
+        
+        .option-icon {
+            width: $optionPaneWidth;
+            height: $optionPaneWidth;
+            box-sizing: border-box;
+            border: 3px solid $mainColor;
+            background-color: rgba($lightColor, 0.4);
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            
+            &:before {
+                @include ionicon;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                text-align: center;
+                line-height: 0;
+                padding-top: 50%;
+                font-size: 50pt;
+                box-sizing: border-box;
+                pointer-events: none;
+            }
+            
+            &:hover:before {
+                color: darken($darkColor, 10%);
+            }
+            
+            &.icon-empty {
+                &:before {
+                    content: '\f29e';
+                }
+                
+                &:hover:before {
+                    background-color: $lightColor;
+                }
+
+                &:active:before {
+                    background-color: darken($lightColor, 20%);
+                }
+            }
+            
+            &.icon-full {
+                &:hover:before {
+                    content: '\f29f';
+                    background-color: rgba($lightColor, 0.9);
+                }
+
+                &:active:before {
+                    background-color: rgba(darken($lightColor, 20%), 0.9);
+                }
+            }
+        }
+        
+        .option-stats {
+            background-color: rgba($lightColor, 0.4);
+            padding: 6px;
+            padding-left: 10px;
+            padding-right: 10px;
+            
+            &:last-child {
+                border-bottom: 3px solid $mainColor;
+            }
+            
+            p {
+                margin: 0;
+                padding-top: 2px;
+                padding-bottom: 3px;
+                font-size: 10pt;
+                font-weight: 400;
+                
+                input[type="checkbox"] {
+                    display: none;
+                    
+                    & + label:before {
+                        content: ' ';
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin-right: 8px;
+                        background-clip: padding-box;
+                        border: 2px solid rgba(0, 0, 0, 0);
+                        outline: 1px solid $mainColor;
+                        box-sizing: border-box;
+                    }
+                    
+                    &:checked + label:before {
+                        background-color: $mainColor;
+                    }
+                }
+            }
+        }
+        
+        .option-button {
+            width: 100%;
+            border: none;
+            margin: 0;
+            background-color: $mainColor;
+            color: darken($darkColor, 10%);
+            padding: 5px;
+            font-size: 9pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            outline: none;
+            
+            &:hover {
+                background-color: $lightColor;
+            }
+            
+            &:active {
+                background-color: darken($lightColor, 20%);
+            }
+        }
+    }
+    
+    .option-seperator {
+        font-size: 40pt;
+        text-align: center;
+        flex-grow: 1;
+        text-align: center;
+        padding-top: ($optionPaneWidth - 20px) / 2;
+    }
+}

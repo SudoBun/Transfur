@@ -1,0 +1,80 @@
+body { /*Page Behind Login*/
+	overflow: hidden !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(1) { /*Login Pane Header*/
+	display: none !important;
+}
+
+body > div > div > form > table.maintable { /*Login Pane*/
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	z-index: 10 !important;
+}
+
+.falogo { /*FA Logo*/
+	width: 100px !important;
+	margin-top: 10px !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table { /*Form Pane*/
+	width: 100% !important;
+	max-width: 300px !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=text],
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=password] { /*Login Form Textboxes*/
+	box-sizing: border-box !important;
+	padding: 10px !important;
+	border-radius: 4px !important;
+	background-color: rgba(0,0,0,0.3) !important;
+	color: white !important;
+	font-size: 14pt !important;
+	border: 2px solid rgba(0,0,0,0.3) !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=text]:focus,
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=password]:focus { /*Login Form Textboxes Focus*/
+	outline: none !important;
+	border: 2px solid white !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit] { /*Login Form Submit*/
+	box-sizing: border-box !important;
+	padding: 10px !important;
+	border-radius: 4px !important;
+	background-color: rgb(250,175,58) !important;
+	color: #382303 !important;
+	font-size: 14pt !important;
+	border: 2px solid rgba(0,0,0,0.2) !important;
+	font-weight: bold !important;
+	cursor: pointer !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit]:focus { /*Login Form Submit Focus*/
+	outline: none !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit]:hover { /*Login Form Submit Hover*/
+	background-color: rgb(255, 193, 96) !important;
+}
+
+#recaptcha-container > div > div { /*reCAPTCHA Wrapper*/
+	margin: 0 auto !important;
+	padding-top: 4px !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > div { /*Breach Info*/
+	display: none !important;
+}
+
+.ads { /*Advertisements*/
+	display: none !important;
+}
+
+.footer { /*Footer*/
+	display: none !important;
+}

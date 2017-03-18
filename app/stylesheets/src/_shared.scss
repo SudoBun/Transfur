@@ -1,0 +1,102 @@
+// Vars
+$mainColor: #E95B25;
+$lightColor: #EF8A26;
+$darkColor: #913703;
+
+$headerHeight: 23px;
+
+// Mixins
+@mixin ionicon {
+	display: inline-block;
+	font-family: "Ionicons";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-rendering: auto;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Styles
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.75);
+	box-shadow: 4px 4px 4px black;
+	cursor: default;
+	-webkit-user-select: none;
+}
+
+body {
+	font-family: -apple-system, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+header {
+	background-color: $mainColor;
+	-webkit-app-region: drag;
+	height: $headerHeight;
+	width: 100%;
+
+	.button {
+		height: $headerHeight;
+		width: $headerHeight;
+		box-sizing: border-box;
+		border: 2px solid $mainColor;
+		float: left;
+		text-align: center;
+		color: $darkColor;
+		font-size: 16pt;
+		line-height: 0;
+		background-color: $mainColor;
+		padding: 0;
+		padding-bottom: 3px;
+		outline: none;
+		border-radius: 6px;
+		-webkit-app-region: no-drag;
+		
+		&:hover {
+			background-color: $lightColor;
+		}
+
+		&:active {
+			background-color: darken($lightColor, 20%);
+		}
+	}
+	
+	h1 {
+		font-size: 11pt;
+		padding: 0;
+		font-weight: normal;
+		color: $darkColor;
+		text-align: center;
+		margin: 0;
+		width: 100%;
+		padding-top: 3px;
+		pointer-events: none;
+		display: block;
+		position: absolute;
+	}
+}
+
+main {
+	color: $mainColor;
+	height: calc(100% - #{$headerHeight});
+	display: flex;
+}
