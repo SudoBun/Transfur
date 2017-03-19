@@ -4,7 +4,7 @@ import { BrowserWindow } from 'electron'
 import json from '../../package.json'
 
 function init (parentWindow, message) {
-	let alertWindow = new BrowserWindow({
+	const alertWindow = new BrowserWindow({
 		title: json.name,
 		width: 450,
 		height: 200,
@@ -32,9 +32,9 @@ function init (parentWindow, message) {
 	})
 
 	alertWindow.on('closed', () => {
-		alertWindow = null
+		alertWindow.destroy()
 	})
-	
+
 	return alertWindow
 }
 

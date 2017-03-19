@@ -9,4 +9,6 @@ $('body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > ta
 /* Add placeholders to login form */
 $('body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=text]').attr('placeholder', 'Username');
 $('body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=password]').attr('placeholder', 'Password');
-$('body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit]').attr('value', 'Log In');
+
+/* Add cancel button to login form */
+$('body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit]').after('<input type="reset" class="button" value="Cancel" onclick="window.close()"/>');

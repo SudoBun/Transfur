@@ -4,6 +4,12 @@
 // Vars
 $optionPaneWidth: 120px;
 
+// Animations
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 // Styles
 header {}
 
@@ -54,16 +60,13 @@ main {
                 pointer-events: none;
             }
             
-            &:hover:before {
-                color: darken($darkColor, 10%);
-            }
-            
             &.icon-empty {
                 &:before {
                     content: '\f29e';
                 }
                 
                 &:hover:before {
+                    color: darken($darkColor, 10%);
                     background-color: $lightColor;
                 }
 
@@ -72,9 +75,17 @@ main {
                 }
             }
             
+            &.icon-loading {
+                &:before {
+                    content: '\f29c';
+                    animation: spin 2s linear infinite;
+                }
+            }
+            
             &.icon-full {
                 &:hover:before {
                     content: '\f29f';
+                    color: darken($darkColor, 10%);
                     background-color: rgba($lightColor, 0.9);
                 }
 

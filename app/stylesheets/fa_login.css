@@ -2,6 +2,10 @@ body { /*Page Behind Login*/
 	overflow: hidden !important;
 }
 
+body * { /*Whole Page*/
+	-webkit-font-smoothing: antialiased;
+}
+
 body > div > div > form > table.maintable > tbody > tr:nth-child(1) { /*Login Pane Header*/
 	display: none !important;
 }
@@ -60,6 +64,28 @@ body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table
 
 body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=submit]:hover { /*Login Form Submit Hover*/
 	background-color: rgb(255, 193, 96) !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=reset] { /*Login Form Cancel*/
+	width: 100%;
+	box-sizing: border-box;
+	background-color: transparent;
+	color: #ffffff !important;
+	font-size: 14pt;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 10px !important;
+	border-radius: 4px !important;
+	border: none;
+	margin-top: 5px;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=reset]:focus { /*Login Form Cancel Focus*/
+	outline: none !important;
+}
+
+body > div > div > form > table.maintable > tbody > tr:nth-child(2) > td > table > tbody > tr > td > input[type=reset]:hover { /*Login Form Cancel Hover*/
+	background-color: rgba(0,0,0,0.2) !important;
 }
 
 #recaptcha-container > div > div { /*reCAPTCHA Wrapper*/
