@@ -15,18 +15,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	})
 
 	let authenticating = false
-	let authEl = document.querySelector('.icon-empty')
-	authEl.addEventListener('click', function () {
-		if (!authenticating) {
-			authenticating = true
-			ipcRenderer.send('authenticate', this.getAttribute('type'))
-			this.classList.remove('icon-empty')
-			this.className += ' icon-loading'
-		}
+	let authEls = document.querySelectorAll('.icon-empty')
+	authEls.forEach(function(authEl) {
+		authEl.addEventListener('click', function () {
+			if (!authenticating) {
+				authenticating = true
+				ipcRenderer.send('authenticate', { type: this.getAttribute('type') })
+				this.classList.remove('icon-empty')
+				this.className += ' icon-loading'
+			}
+		})
 	})
 	ipcRenderer.on('authenticate-complete', (event, arg) => {
 		authenticating = false
-		let authEl = document.querySelector('.option-icon[type='+arg+']')
+		let authEl = document.querySelector('.option-icon[type='+arg.type+']')
 		authEl.classList.remove('icon-loading')
 		authEl.className += ' icon-empty'
 	})

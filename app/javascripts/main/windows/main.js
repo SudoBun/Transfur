@@ -4,7 +4,7 @@ import { BrowserWindow } from 'electron'
 import json from '../../package.json'
 
 function init () {
-	const mainWindow = new BrowserWindow({
+	let mainWindow = new BrowserWindow({
 		title: json.name,
 		width: json.settings.width,
 		height: json.settings.height,
@@ -30,7 +30,7 @@ function init () {
 	})
 
 	mainWindow.on('closed', () => {
-		mainWindow.destroy()
+		mainWindow = null
 	})
 
 	return mainWindow
