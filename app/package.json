@@ -9,6 +9,7 @@
   "license": "MIT",
   "main": "javascripts/main/index.js",
   "dependencies": {
-
+    "electron-prebuilt": "^1.2.5",
+    "nightmare": "^2.10.0"
   }
 }
