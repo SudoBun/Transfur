@@ -5,8 +5,10 @@
 	<title></title>
 	<link rel="stylesheet" href="stylesheets/ionicons.min.css"/>
 	<link rel="stylesheet" href="stylesheets/application.css"/>
+	<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 	<script src="javascripts/main/jquery.min.js" type="text/javascript"></script>
 	<script src="javascripts/renderer/application.js" type="text/javascript"></script>
+	<script>if (window.module) module = window.module;</script>
 </head>
 <body>
 	<header>
@@ -19,11 +21,7 @@
 			<div id="pane-source" class="option-pane">
 				<h2 class="option-title">source</h2>
 				<div class="option-icon icon-empty" type="source"></div>
-				<div class="option-stats" style="display: none;">
-					<p>5 Uploads</p>
-					<p>400 Watches</p>
-					<p>906 Favorites</p>
-				</div>
+				<div class="option-stats" style="display: none;"></div>
 			</div>
 			<div id="pane-seperator" class="option-seperator">
 				&#x2771;&#x276D;&#x276D;
@@ -31,7 +29,7 @@
 			<div id="pane-target" class="option-pane">
 				<h2 class="option-title">target</h2>
 				<div class="option-icon icon-empty" type="target"></div>
-				<div class="option-stats"  style="display: none;">
+				<div class="option-stats" style="display: none;">
 					<p><input type="checkbox" id="option-uploads"/><label for="option-uploads">Uploads</label></p>
 					<p><input type="checkbox" id="option-watches"/><label for="option-watches">Watches</label></p>
 					<p><input type="checkbox" id="option-favorites"/><label for="option-favorites">Favorites</label></p>
