@@ -1,5 +1,13 @@
 import { ipcRenderer, remote, webFrame } from 'electron'
 
+window.addEventListener('focus', (event) => {
+	document.querySelector('body').classList.remove('blur')
+})
+
+window.addEventListener('blur', (event) => {
+	document.querySelector('body').classList.add('blur')
+})
+
 document.addEventListener('DOMContentLoaded', (event) => {
 	webFrame.setVisualZoomLevelLimits(1, 1)
 	webFrame.setLayoutZoomLevelLimits(0, 0)

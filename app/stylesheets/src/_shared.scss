@@ -100,3 +100,28 @@ main {
 	height: calc(100% - #{$headerHeight});
 	display: flex;
 }
+
+body.blur {
+	header {
+		background-color: rgba($lightColor, 0.1);
+		
+		.button {
+			color: $mainColor;
+			border-color: transparent;
+			background-color: transparent;
+			background-clip: padding-box;
+			
+			&:hover {
+				background-color: rgba($lightColor, 0.4);
+			}
+			
+			&:active {
+				color: darken($darkColor, 10%);
+			}
+		}
+		
+		h1 {
+			color: $mainColor;
+		}
+	}
+}

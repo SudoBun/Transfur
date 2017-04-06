@@ -17,7 +17,7 @@
 		<h1 id="title">Transfur</h1>
 	</header>
 	<main>
-		<section id="step-1" class="option-section">
+		<section id="step-1" class="option-section" style="display:none;">
 			<div id="pane-source" class="option-pane">
 				<h2 class="option-title">source</h2>
 				<div class="option-icon icon-empty" type="source"></div>
@@ -37,6 +37,27 @@
 				<button id="option-transfur" class="option-button" style="display: none;">Transfur</button>
 			</div>
 		</section>
+		<section id="step-2" class="loading-section">
+			<div class="loading-pane">
+				<div class="loading-top-container">
+					<h2 class="loading-title">initializing</h2>
+					<h2 class="loading-counter"><span id="counter-current">0</span>/<span id="counter-total">0</span></h2>
+				</div>
+				<div id="loading-bar-container-primary" class="loading-bar-container">
+					<div id="loading-bar-primary" class="loading-bar" style="width: 40%;"></div>
+				</div>
+				<div id="loading-bar-container-secondary" class="loading-bar-container">
+					<div id="loading-bar-secondary" class="loading-bar" style="width: 70%;"></div>
+				</div>
+				<div class="loading-bar-container">
+					<div class="loading-bar"></div>
+				</div>
+				<div class="loading-bottom-container">
+					<h2 class="loading-subtitle"><span id="source-subtitle">source</span> &#x2771;&#x276D;&#x276D; <span id="target-subtitle">target</span></h2>
+				</div>
+			</div>
+		</section>
+		<div class="console"></div>
 	</main>
 </body>
 </html>
